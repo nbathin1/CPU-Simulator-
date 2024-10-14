@@ -1,0 +1,4 @@
+Stalled cycles due to structural hazard: 17 
+Total execution cycles: 127
+Total instruction simulated: 101
+IPC: 0.795276

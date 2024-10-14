@@ -1,0 +1,76 @@
+Here’s a README file for your project based on the details from your document:
+
+CPU Simulator for CS520 Computer Architecture
+
+Project Overview
+
+This project is a software-based CPU simulator designed to mimic the operations of a hardware pipeline system. It includes a multi-stage pipeline that simulates various stages of instruction execution, such as Instruction Fetch (IF), Instruction Decode (ID), Instruction Address (IA), and more. The goal is to accurately represent how a real CPU processes instructions in parallel.
+
+Features
+
+	•	Multi-stage Pipeline Simulation: Simulates a hardware pipeline, including stages such as IF, ID, IA, RR, and more.
+	•	Memory Mapping: Simulates memory interaction, with the first 1000 bytes reserved for program instructions and the remaining space for data.
+	•	Hazard Detection: Models structural hazards and pipeline stalls caused by memory access conflicts.
+	•	Execution Logging: Generates detailed logs at each stage of execution, including performance metrics (e.g., IPC, execution cycles) and register status.
+
+Memory Architecture
+
+	•	Memory Map: The project simulates a 64KB memory, with 1000 bytes reserved for program instructions and the rest allocated to data storage. Each instruction occupies 4 bytes of memory.
+	•	Instructions: The instruction set includes operations such as sub, add, mul, div, and set. Each instruction consists of an opcode, destination register, and operands.
+
+Files
+
+	•	Memory Map File: A memory map file is used for simulation, containing data in 4-byte memory units. This file is commonly used by all programs.
+	•	Logs: The simulator produces several log files:
+	•	_stats.txt: Shows performance stats like execution cycles and IPC.
+	•	_pipeline.txt: Displays instruction flow at each clock cycle.
+	•	_registerstatus.txt: Shows the final register values.
+	•	_result.txt: Provides a summary of the instruction cycles and register statuses.
+
+Instruction Set
+
+Example instructions:
+
+0000 sub R65 #106 #190
+0004 add R60 #120 #234
+0008 mul R33 #132 #252
+
+Each instruction contains:
+
+	•	Opcode (e.g., sub, add, mul)
+	•	Destination register (e.g., R65)
+	•	Operands (e.g., #106, #190)
+
+Structural Hazards
+
+The simulator identifies and simulates structural hazards, including memory conflicts during instruction execution. Pipeline stalls are injected as “bubbles” when such hazards occur, allowing the simulator to mimic real CPU behavior more accurately.
+
+Logs and Output
+
+The CPU simulator provides detailed output at each stage of execution:
+
+	•	Pipeline logs: Step-by-step logs showing the current state of each instruction at different stages (e.g., ID, IF).
+	•	Performance logs: Includes cycle counts, instructions per cycle (IPC), and other relevant statistics.
+	•	Register status logs: Shows the final state of all registers after execution.
+
+How to Run the Simulator
+
+	1.	Ensure you have all the required program files.
+	2.	Run the simulation using the provided instruction set and memory map.
+	3.	View the output logs to analyze the performance and behavior of the pipeline simulation.
+
+Future Enhancements
+
+	•	Implement support for additional instruction sets.
+	•	Improve hazard detection algorithms.
+	•	Enhance the visualization of pipeline stages and structural hazards.
+
+Author
+
+	•	Nikhil Bathini
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Let me know if you’d like to customize or add any additional information!
